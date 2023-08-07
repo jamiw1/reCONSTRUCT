@@ -1,0 +1,3 @@
+local PlayerData = {}
+
+return PlayerData

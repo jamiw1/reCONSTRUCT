@@ -1,0 +1,29 @@
+{
+  "name": "reCONSTRUCT",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "reCONSTRUCT": {
+        "$path": "src/Shared"
+      }
+    },
+
+    "ServerScriptService": {
+      "reCONSTRUCT": {
+        "$path": "src/Server"
+      }
+    },
+
+    "ServerStorage": {
+      "reCONSTRUCT": {
+        "$path": "src/ServerStorage"
+      }
+    },
+    "StarterPlayer": {
+      "$path": "src/StarterPlayer",
+      "StarterPlayerScripts": {},
+      "StarterCharacterScripts": {}
+    }
+  }
+}
