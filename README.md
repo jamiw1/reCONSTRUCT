@@ -2,9 +2,9 @@ Welcome to reCONSTRUCT!
 Below is the almost full documentation explaining how to use the reCONSTRUCT engine, and it's features.
 
 
---~~==
---~~== Player
---~~==
+--==
+--== Player
+--==
 
 
 Creating a player is easy!
@@ -13,6 +13,7 @@ Inside the Server script, get the player in some way, (usually by using Players.
 Setting the PlayerData value to the new player is not required, but highly recommended to easily access data about a player.
 
 Example:
+```lua
 PLRS.PlayerAdded:Connect(function(plr)
 	Data.PlayerData[plr] = Services.Player.new( --Initializes new player object
 		plr, --Sets the player inside the player object
@@ -24,6 +25,7 @@ PLRS.PlayerAdded:Connect(function(plr)
 		0 --Initial currency value
 	)
 end)
+```
 
 == -Currency- ==
 
