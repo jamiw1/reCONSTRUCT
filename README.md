@@ -1,4 +1,7 @@
 # Welcome to reCONSTRUCT!
+reCONSTRUCT is Roblox framework/engine (if you want to call it an engine) that allows anyone to create "classic-esque" games easily.
+An example of a game using reCONSTRUCT is Untitled Plate Game
+
 Below is the almost full documentation explaining how to use the reCONSTRUCT engine, and it's features.
 
 
@@ -34,44 +37,43 @@ This CurrencyData module contains static info about the in game currency, such a
 Currently, it is advised to not change the Name or Symbol of the Currency outside of the CurrencyData module.
 It is important to only change the player's Currency using the methods provided. This ensures it will work with the rest of the modules.
 
-Default CurrencyData 
-(
+**Default CurrencyData**
 ```lua
 local CurrencyData = {
 	Name = "Currency",
 	Symbol = "",
 }
 ```
-)
+
 
 ### Methods
 ```lua
 Player:GetCurrencyValue()
 ```
-[ Returns the player's current currency amount.
-[ returns CurrencyValue : Float
+- Returns the player's current currency amount.
+- returns CurrencyValue : Float
 ```lua
 Player:SetCurrencyValue(value)
 ```
-[ Sets the value of the player's currency, and returns the old value, and then the new value
-[ returns OldCurrency : Float, NewCurrency : Float
+- Sets the value of the player's currency, and returns the old value, and then the new value
+- returns OldCurrency : Float, NewCurrency : Float
 ```lua
 Player:AddCurrency(value)
 ```
-[ Adds value currency to player's currency
-[ returns OldCurrency : Float, NewCurrency : Float
+- Adds value currency to player's currency
+- returns OldCurrency : Float, NewCurrency : Float
 ```lua
 Player:TakeCurrency(value)
 ```
-[ Subtracts value currency to player's currency
-[ returns OldCurrency : Float, NewCurrency : Float
+- Subtracts value currency to player's currency
+- returns OldCurrency : Float, NewCurrency : Float
 
 ### Events
 ```lua
 Player.OnCurrencyValueChange
 ```
-[ Fires whenever player's Currency is changed
-[ returns OldCurrency : Float, NewCurrency : Float
+- Fires whenever player's Currency is changed
+- returns OldCurrency : Float, NewCurrency : Float
 
 ## Avatar
 
@@ -111,75 +113,75 @@ You can dequip or equip all equipped/unequipped cosmetics, by using their respec
 ```lua
 Player:SetColor(brickcolor)
 ```
-[ Sets the player's color based on a BrickColor.
-[ returns OldBrickColor : BrickColor, NewBrickColor : BrickColor
+- Sets the player's color based on a BrickColor.
+- returns OldBrickColor : BrickColor, NewBrickColor : BrickColor
 ```lua
 Player:SpawnCosmetic(cosmeticObj)
 ```
-[ Spawns a new cosmetic into the player's Player.Cosmetics table. This allows them to utilize said cosmetic.
-[ returns nil
+- Spawns a new cosmetic into the player's Player.Cosmetics table. This allows them to utilize said cosmetic.
+- returns nil
 ```lua
 Player:RevokeCosmetic(cosmeticID)
 ```
-[ Revokes a cosmetic from the player's Player.Cosmetics table. This makes them unable to utilize this cosmetic anymore
-[ returns nil
+- Revokes a cosmetic from the player's Player.Cosmetics table. This makes them unable to utilize this cosmetic anymore
+- returns nil
 ```lua
 Player:EquipCosmetic(cosmeticID)
 ```
-[ Equips cosmetic based on ID.
-[ returns nil
+- Equips cosmetic based on ID.
+- returns nil
 ```lua
 Player:DequipCosmetic(cosmeticID)
 ```
-[ Dequips cosmetic based on ID. If the cosmetic type is a face, then it will be replaced with the default ROBLOX smile.
-[ returns nil
+- Dequips cosmetic based on ID. If the cosmetic type is a face, then it will be replaced with the default ROBLOX smile.
+- returns nil
 ```lua
 Player:FindCosmetic(cosmeticID)
 ```
-[ Finds cosmetic in player's Player.Cosmetic table based on ID.
-[ returns Cosmetic : Cosmetic
+- Finds cosmetic in player's Player.Cosmetic table based on ID.
+- returns Cosmetic : Cosmetic
 ```lua
 Player:GetCosmetics()
 ```
-[ Returns all the player's currently owned cosmetic objects.
-[ returns {Cosmetic : Cosmetic, ...}
+- Returns all the player's currently owned cosmetic objects.
+- returns {Cosmetic : Cosmetic, ...}
 ```lua
 Player:GetEquippedCosmetics()
 ```
-[ Returns all the player's currently equipped cosmetic objects.
-[ returns {Cosmetic : Cosmetic, ...}
+- Returns all the player's currently equipped cosmetic objects.
+- returns {Cosmetic : Cosmetic, ...}
 ```lua
 Player:GetUnequippedCosmetics()
 ```
-[ Returns all the player's currenctly unequipped cosmetic objects.
-[ returns {Cosmetic : Cosmetic, ...}
+- Returns all the player's currenctly unequipped cosmetic objects.
+- returns {Cosmetic : Cosmetic, ...}
 
 ### Events
 ```lua
 Player.OnCosmeticSpawned
 ```
-[ Fired whenever a cosmetic is spawned into the player's Player.Cosmetic table
-[ returns CosmeticSpawned : Cosmetic
+- Fired whenever a cosmetic is spawned into the player's Player.Cosmetic table
+- returns CosmeticSpawned : Cosmetic
 ```lua
 Player.OnCosmeticRevoked
 ```
-[ Fired whenever a cosmetic is revoked from the player's Player.Cosmetic table based on ID
-[ returns CosmeticRevoked : Cosmetic
+- Fired whenever a cosmetic is revoked from the player's Player.Cosmetic table based on ID
+- returns CosmeticRevoked : Cosmetic
 ```lua
 Player.OnCosmeticEquip
 ```
-[ Fired when a cosmetic is equipped
-[ returns CosmeticEquipped : Cosmetic
+- Fired when a cosmetic is equipped
+- returns CosmeticEquipped : Cosmetic
 ```lua
 Player.OnCosmeticDequip
 ```
-[ Fired when a cosmetic is dequipped
-[ returns CosmeticDequipped : Cosmetic
+- Fired when a cosmetic is dequipped
+- returns CosmeticDequipped : Cosmetic
 ```lua
 Player.OnColorChange
 ```
-[ Fired when player's color is changed
-[ returns OldColor : BrickColor, NewColor : BrickColor
+- Fired when player's color is changed
+- returns OldColor : BrickColor, NewColor : BrickColor
 
 
 # Cosmetics
@@ -198,10 +200,10 @@ By default, CosmeticData is structured like this:
 ```
 CustomEnum initially contains 1 EnumType, and 3 EnumValues, though it is possible to add more.
 
-CosmeticType
--> Head
--> Neck
--> Face
+- CosmeticType
+	- Head
+	- Neck
+	- Face
 
 It is easy to add new custom Enums, but remember to keep each value different! This ensures that no custom Enum can be equal to a different custom Enum.
 
