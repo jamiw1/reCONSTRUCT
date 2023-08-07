@@ -34,8 +34,9 @@ The built-in currency system is simple. The Player object holds important info a
 The currency gets basic info from a module called CurrencyData. (`ReplicatedStorage.SharedStaticData.CurrencyData`)
 This CurrencyData module contains static info about the in game currency, such as the currency name, and the currency symbol.
 
-Currently, it is advised to not change the Name or Symbol of the Currency outside of the CurrencyData module.
-It is important to only change the player's Currency using the methods provided. This ensures it will work with the rest of the modules.
+> [!IMPORTANT]
+> Currently, it is advised to not change the Name or Symbol of the Currency outside of the CurrencyData module.
+> It is important to only change the player's Currency using the methods provided. This ensures it will work with the rest of the modules.
 
 _Default CurrencyData_
 ```lua
@@ -105,7 +106,8 @@ This is helpful if you have a player based cosmetic shop, where they can sell an
 Getting cosmetics from the player is also possible (and neccessary if you don't save the cosmetic object in a variable)
 Using `Player:GetCosmetics()`, you can get a table of all the player's owned cosmetics.
 If you need to find a specific cosmetic, then it is possible to use `Player:FindCosmetic(cosmeticID)` to get the specific object.
-We recommend using `Player:EquipCosmetic(cosmeticID)` and `Player:DequipCosmetic(cosmeticID)` for their respective purposes over finding the cosmetic.
+> [!NOTE]
+> We recommend using `Player:EquipCosmetic(cosmeticID)` and `Player:DequipCosmetic(cosmeticID)` for their respective purposes over finding the cosmetic.
 
 You can dequip or equip all equipped/unequipped cosmetics, by using their respective methods (`Player:GetEquippedCosmetics()` and `Player:GetUnequippedCosmetics()`)
 
@@ -205,7 +207,9 @@ CustomEnum initially contains 1 EnumType, and 3 EnumValues, though it is possibl
 	- Neck
 	- Face
 
-It is easy to add new custom Enums, but remember to keep each value different! This ensures that no custom Enum can be equal to a different custom Enum.
+> [!IMPORTANT]
+> It is easy to add new custom Enums, but remember to keep each value different!
+> This ensures that no custom Enum can be equal to a different custom Enum.
 
 Creating the cosmetic object is not difficult. Ensure you have the static data for the cosmetic located somewhere and available in the script.
 We set the default module to be CosmeticData, but feel free to change the location and require it in some other way.
