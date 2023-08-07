@@ -53,6 +53,13 @@ function Player.new(playerObj, brickcolor, cosmetics, startingCurrency, extradat
 	return self
 end
 
+local function Player:formatCurrency()
+	if self.Currency.SideLeft then
+		return self.Currency.Symbol..tostring(self.Currency.Value)
+	else
+		return tostring(self.Currency.Value)..self.Currency.Symbol
+	end
+end
 -------------------------
 ------ [ Methods ] ------
 -------------------------
@@ -64,7 +71,7 @@ end
 function Player:SetCurrencyValue(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value = value
-	self.Currency.Object.Value = self.Currency.Symbol..tostring(self.Currency.Value)
+	self.Currency.Object.Value = self:formatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, value)
 	return oldValue, value
 end
@@ -72,7 +79,7 @@ end
 function Player:AddCurrency(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value += value
-	self.Currency.Object.Value = self.Currency.Symbol..tostring(self.Currency.Value)
+	self.Currency.Object.Value = self:formatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, self.Currency.Value)
 	return oldValue, self.Currency.Value
 end
@@ -80,7 +87,7 @@ end
 function Player:TakeCurrency(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value -= value
-	self.Currency.Object.Value = self.Currency.Symbol..tostring(self.Currency.Value)
+	self.Currency.Object.Value = self:formatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, self.Currency.Value)
 	return oldValue, self.Currency.Value
 end
