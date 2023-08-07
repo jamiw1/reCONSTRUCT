@@ -37,7 +37,7 @@ This CurrencyData module contains static info about the in game currency, such a
 Currently, it is advised to not change the Name or Symbol of the Currency outside of the CurrencyData module.
 It is important to only change the player's Currency using the methods provided. This ensures it will work with the rest of the modules.
 
-**Default CurrencyData**
+_Default CurrencyData_
 ```lua
 local CurrencyData = {
 	Name = "Currency",
@@ -234,30 +234,30 @@ plr:SpawnCosmetic(newCosmetic) -- This adds the cosmetic to the player's Player.
 ```lua
 Cosmetic:Equip()
 ```
-[ Equips the cosmetic onto the Cosmetic.Parent
-[ returns nil
+- Equips the cosmetic onto the Cosmetic.Parent
+- returns nil
 ```lua
 Cosmetic:Dequip()
 ```
-[ Dequips the cosmetic from the Cosmetic.Parent
-[ returns nil
+- Dequips the cosmetic from the Cosmetic.Parent
+- returns nil
 ```lua
 Cosmetic:ReturnType()
 ```
-[ Returns the cosmetic's type
-[ returns cosmeticsType : CustomEnum.CosmeticType
+- Returns the cosmetic's type
+- returns cosmeticsType : CustomEnum.CosmeticType
 
 ### Events
 ```lua
 Cosmetic.OnEquip
 ```
-[ Fires upon being equipped
-[ returns nil
+- Fires upon being equipped
+- returns nil
 ```lua
 Cosmetic.OnDequip
 ```
-[ Fires upon being dequipped
-[ returns nil
+- Fires upon being dequipped
+- returns nil
 
 
 # Custom Services
