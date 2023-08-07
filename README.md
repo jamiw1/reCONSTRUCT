@@ -11,7 +11,8 @@ Below is the almost full documentation explaining how to use the reCONSTRUCT eng
 Creating a player is easy!
 
 Inside the Server script, get the player in some way, (usually by using Players.PlayerAdded)
-Setting the PlayerData value to the new player is not required, but highly recommended to easily access data about a player.
+> [!NOTE]
+> Setting the PlayerData value to the new player is not required, but highly recommended to easily access data about a player.
 
 Example:
 ```lua
