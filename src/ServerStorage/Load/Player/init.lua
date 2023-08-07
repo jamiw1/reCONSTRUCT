@@ -53,16 +53,17 @@ function Player.new(playerObj, brickcolor, cosmetics, startingCurrency, extradat
 	return self
 end
 
-local function Player:formatCurrency()
+-------------------------
+------ [ Methods ] ------
+-------------------------
+
+function Player:formatCurrency()
 	if self.Currency.SideLeft then
 		return self.Currency.Symbol..tostring(self.Currency.Value)
 	else
 		return tostring(self.Currency.Value)..self.Currency.Symbol
 	end
 end
--------------------------
------- [ Methods ] ------
--------------------------
 
 function Player:GetCurrencyValue()
 	return self.Currency.Value

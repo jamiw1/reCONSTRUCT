@@ -5,13 +5,13 @@
 
     "ReplicatedStorage": {
       "reCONSTRUCT": {
-        "$path": "src/Shared"
+        "$path": "src/ReplicatedStorage"
       }
     },
 
     "ServerScriptService": {
       "reCONSTRUCT": {
-        "$path": "src/Server"
+        "$path": "src/ServerScriptService"
       }
     },
 
