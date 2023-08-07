@@ -25,7 +25,7 @@ PLRS.PlayerAdded:Connect(function(plr)
 end)
 ```
 
-## == -Currency- ==
+## Currency
 
 The built-in currency system is simple. The Player object holds important info about the game currency, like the Value, Name, Symbol and Object.
 The currency gets basic info from a module called CurrencyData. (`ReplicatedStorage.SharedStaticData.CurrencyData`)
@@ -44,7 +44,7 @@ local CurrencyData = {
 ```
 )
 
-### - Methods -
+### Methods
 ```lua
 Player:GetCurrencyValue()
 ```
@@ -66,14 +66,14 @@ Player:TakeCurrency(value)
 [ Subtracts value currency to player's currency
 [ returns OldCurrency : Float, NewCurrency : Float
 
-### - Events -
+### Events
 ```lua
 Player.OnCurrencyValueChange
 ```
 [ Fires whenever player's Currency is changed
 [ returns OldCurrency : Float, NewCurrency : Float
 
-## == -Avatar- ==
+## Avatar
 
 Modifying the player's avatar isn't difficult. When initializing the Player, you can to choose to add cosmetics in the table.
 
@@ -107,7 +107,7 @@ We recommend using `Player:EquipCosmetic(cosmeticID)` and `Player:DequipCosmetic
 
 You can dequip or equip all equipped/unequipped cosmetics, by using their respective methods (`Player:GetEquippedCosmetics()` and `Player:GetUnequippedCosmetics()`)
 
-### - Methods -
+### Methods
 ```lua
 Player:SetColor(brickcolor)
 ```
@@ -154,7 +154,7 @@ Player:GetUnequippedCosmetics()
 [ Returns all the player's currenctly unequipped cosmetic objects.
 [ returns {Cosmetic : Cosmetic, ...}
 
-### - Events -
+### Events
 ```lua
 Player.OnCosmeticSpawned
 ```
@@ -228,7 +228,7 @@ local newCosmetic = Services.Cosmetic.new( -- Storing the cosmetic so we can equ
 plr:SpawnCosmetic(newCosmetic) -- This adds the cosmetic to the player's Player.Cosmetics table, and allows us to utilize the cosmetic directly from the player object
 ```
 
-### - Methods -
+### Methods
 ```lua
 Cosmetic:Equip()
 ```
@@ -245,7 +245,7 @@ Cosmetic:ReturnType()
 [ Returns the cosmetic's type
 [ returns cosmeticsType : CustomEnum.CosmeticType
 
-### - Events -
+### Events
 ```lua
 Cosmetic.OnEquip
 ```
