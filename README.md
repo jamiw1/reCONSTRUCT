@@ -2,8 +2,12 @@
 reCONSTRUCT is Roblox framework/engine (if you want to call it an engine) that allows anyone to create "classic-esque" games easily.
 An example of a game using reCONSTRUCT is Untitled Plate Game
 
-Below is the almost full documentation explaining how to use the reCONSTRUCT engine, and it's features.
+# Installation
 
+To use reCONSTRUCT, just grab the reCONSTRUCT_vX.X.X plugin from the latest release.
+To make changes to reCONSTRUCT here on GitHub, Rojo is the main software we use for updating and pushing changes
+
+Below is the almost full documentation explaining how to use the reCONSTRUCT engine, and it's features.
 
 # Player
 
