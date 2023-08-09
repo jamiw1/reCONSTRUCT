@@ -57,7 +57,7 @@ end
 ------ [ Methods ] ------
 -------------------------
 
-function Player:formatCurrency()
+function Player:FormatCurrency()
 	if self.Currency.SideLeft then
 		return self.Currency.Symbol..tostring(self.Currency.Value)
 	else
@@ -72,7 +72,7 @@ end
 function Player:SetCurrencyValue(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value = value
-	self.Currency.Object.Value = self:formatCurrency()
+	self.Currency.Object.Value = self:FormatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, value)
 	return oldValue, value
 end
@@ -80,7 +80,7 @@ end
 function Player:AddCurrency(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value += value
-	self.Currency.Object.Value = self:formatCurrency()
+	self.Currency.Object.Value = self:FormatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, self.Currency.Value)
 	return oldValue, self.Currency.Value
 end
@@ -88,7 +88,7 @@ end
 function Player:TakeCurrency(value)
 	local oldValue = self.Currency.Value
 	self.Currency.Value -= value
-	self.Currency.Object.Value = self:formatCurrency()
+	self.Currency.Object.Value = self:FormatCurrency()
 	self.OnCurrencyValueChange:Fire(oldValue, self.Currency.Value)
 	return oldValue, self.Currency.Value
 end
