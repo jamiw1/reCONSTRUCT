@@ -76,7 +76,12 @@ Player:TakeCurrency(value)
 ```
 - Subtracts value currency to player's currency
 - returns OldCurrency : Float, NewCurrency : Float
-
+```lua
+Player:FormatCurrency()
+```
+- Formats currency into string based off of symbol side
+- returns FormattedCurrency : String
+  
 ### Events
 ```lua
 Player.OnCurrencyValueChange
